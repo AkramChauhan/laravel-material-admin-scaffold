@@ -9265,11 +9265,6 @@ module.exports = function(Chart) {
 		return (pixelWidth % 2 === 0) ? 0 : 0.5;
 	};
 	helpers.splineCurve = function(firstPoint, middlePoint, afterPoint, t) {
-		//Props to Rob Spencer at scaled innovation for his post on splining between points
-		//http://scaledinnovation.com/analytics/splines/aboutSplines.html
-
-		// This function must also respect "skipped" points
-
 		var previous = firstPoint.skip ? middlePoint : firstPoint,
 			current = middlePoint,
 			next = afterPoint.skip ? middlePoint : afterPoint;
